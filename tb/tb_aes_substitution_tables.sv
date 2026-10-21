@@ -41,7 +41,10 @@ module tb_aes_substitution_tables;
             inverse_input_value = sbox_value;
             #1;
             if (inverse_sbox_value !== index[7:0]) begin
-                $error("Input=%02h SBOX=%02h INV=%02h",index[7:0], sbox_value, inverse_sbox_value);
+                $error(
+                    "Input=%02h SBOX=%02h INV=%02h",
+                    index[7:0], sbox_value, inverse_sbox_value
+                );
                 errors = errors + 1;
             end
         end
