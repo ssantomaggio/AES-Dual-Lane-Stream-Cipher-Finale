@@ -90,6 +90,10 @@ module stream_cipher_dual_lane_single_cycle (
                 busy         <= 1'b1; 
             end
 
+            
+//se al fronte di salita start valid e start ready sono 1, il cifrario carica counter=key e DAL CICLO SUCCESSIVO si possono mandare byte o coppie di byte validi.
+
+
             // Non è consentito avviare un messaggio mentre siamo occupati.
             if (start_valid && !start_ready) //richiedo di inviare un nuovo messaggio ma il circuito non è pronto per accettarlo, quindi protocol error
                 protocol_error <= 1'b1;
