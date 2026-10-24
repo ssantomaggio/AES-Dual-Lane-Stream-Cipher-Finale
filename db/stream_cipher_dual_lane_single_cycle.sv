@@ -113,7 +113,7 @@ module stream_cipher_dual_lane_single_cycle (
                 input_closed <= 1'b0;
             end
 
-            // Se l'uscita è bloccata, questo registro mantiene il valore.
+            // Se l'uscita è bloccata, dato, maschera, last e valid mantengono i valori precedenti.
             if (output_ready) //se il registro di uscita può essere scritto
                 out_valid <= input_transfer; //input transfer indica che l’ingresso è stato accettato. Quindi dal momento che viene accettato il dato in ingresso verranno fatti tutti i calcoli (in realtà vengono fatti sempre e continuamente, ma in questo caso da quanto input transfer è 1 al fronte di salita verranno aggiornati i dati) e nel fronte di salita si mette out valid = input transfer, cioe se input trasfer è 1 allora ci saranno stati calcoli che hanno prodotto un data out da inserire nel registro di uscita, e quindi out_valid=1. 
 
