@@ -236,7 +236,7 @@ module tb_stream_cipher_protocol;
         @(negedge clk); //aspettiamo poi una discesa per controllarlo
         //il risultato rimane nel registro, perché out_ready = 0.
         //L'AVEVAMO MESSO A 0 A RIGA 194
-// Con chiave 3C: 00 XOR SBOX[3C] = EB.
+    // Con chiave 3C: 00 XOR SBOX[3C] = EB.
         if (out_data !== 16'h00EB ||
             out_byte_valid !== 2'b01 ||
             out_last !== 1'b1) begin
