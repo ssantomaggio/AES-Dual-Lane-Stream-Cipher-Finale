@@ -90,7 +90,7 @@ module tb_stream_cipher_dual_lane;
 
     initial begin //istruzioni eseguite in sequenza, una sola volta e a inizio simulazione,
         // Avvia Modelsim dalla cartella modelsim.
-        file_handle = $fopen("modelsim/tv/test_vectors.tv", "r"); //lo apre in lettura, r. L'apertura produrrà un valore per file_handle.
+        file_handle = $fopen("tv/test_vectors.tv", "r"); //lo apre in lettura, r. L'apertura produrrà un valore per file_handle.
         if (file_handle == 0)
             $fatal(1, "Cannot open tv/test_vectors.tv");
 

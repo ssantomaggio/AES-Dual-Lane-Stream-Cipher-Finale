@@ -81,6 +81,7 @@ def test_maschere_illegali():
 
 if __name__ == "__main__":
     test_vettore_assegnamento()
+    test_trasferimenti_assegnamento() 
     test_proprieta_xor()
     test_wrap_around_contatore()
     test_maschere_illegali()
