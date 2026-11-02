@@ -1,0 +1,118 @@
+\documentclass[a4,10pt,twoside,openright,italian,english]{book}% twoside!
+
+\usepackage[twoside=false]{geometry}
+
+\geometry{a4paper, margin=3cm, top=3.8cm, bindingoffset=0.4cm}
+
+\usepackage[cam,center,a4,pdflatex,axes]{crop}
+\usepackage{color,soul}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{phdthesis}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{array}
+\usepackage{mdwmath}
+\usepackage{mdwtab}
+\usepackage{amsmath,amssymb}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{subfig}
+\usepackage{booktabs}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage{url}
+\usepackage{bnf}
+\usepackage{rotating}
+\usepackage{multirow}
+\usepackage{phdtitle}
+\usepackage{paralist}
+\usepackage{bibentry}
+\usepackage{xurl}
+\usepackage{comment}
+\usepackage[bookmarks=true,bookmarksopen=true,hidelinks]{hyperref}
+\usepackage[toc,acronym]{glossaries}
+\usepackage{lscape}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{longtable}
+\usepackage[T1]{fontenc} 
+\usepackage[utf8]{inputenc}
+\hyphenation{}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
+\lstset{numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt}
+\lstset{emph={Input,Output,if,then,else,return,end,for,begin},emphstyle={\bfseries}}
+
+
+\newtheorem{Definition}{Definition}[section]
+
+\lstset{tabsize=2,basicstyle=\footnotesize,breaklines=true}
+        
+
+\usepackage[english,italian]{babel}
+\usepackage{ulem}
+\normalem
+\nobibliography*
+\degree{Master's Degree in Cybersecurity}
+\titleimage{unipi.png} %please not change
+
+% -----------------------------------------------------------
+% Please fulfil the followed fields with your data
+% -----------------------------------------------------------
+% -- List of author(s)
+\author{Author 1
+% If more than one author, uncomment line(s) below (and eventtually add)
+% \\Author 2
+% \\Author 3
+}
+
+% -- Report Title
+\title{Title}
+
+% -- Academic year: use the format YYYY/YYYY+1
+\courseyear{2023/2024}
+
+% -----------------------------------------------------------
+% Document
+% -----------------------------------------------------------
+% -- Main settings
+\begin{document}
+\selectlanguage{english}
+\maketitle
+\pagestyle{empty}
+\cleardoublepage
+\newpage
+\cleardoublepage
+\newpage
+\pagestyle{empty}
+\setcounter{page}{1}
+\pagenumbering{Roman}
+
+% -- Table of Contents (ToCs)
+\tableofcontents
+\cleardoublepage
+\newpage
+\setcounter{page}{1}
+\pagenumbering{arabic}
+\cleardoublepage
+
+% -- Chapters
+\input{chapters/chapter1}
+\input{chapters/chapter2}
+\input{chapters/chapter3}
+\input{chapters/chapter4}
+\input{chapters/chapter5}
+\input{chapters/chapter6}
+
+% -- Ending section
+%\cleardoublepage
+%\phantomsection
+%\addcontentsline{toc}{chapter}{\bibname}
+%\small
+
+\end{document}

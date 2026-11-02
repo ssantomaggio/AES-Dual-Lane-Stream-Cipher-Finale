@@ -1,0 +1,36 @@
+\ProvidesPackage{phdtitle}[2009/05/05 v1.0 PhD Thesis Title]
+\RequirePackage{graphicx}
+\newcommand{\degree}[1]{\def\@degree{#1}}
+\newcommand{\titleimage}[1]{\def\@titleimage{#1}}
+\newcommand{\courseyear}[1]{\def\@courseyear{#1}}
+\renewcommand{\maketitle}{
+\thispagestyle{empty}
+\vspace*{1cm}
+\begin{center}
+\bfseries
+\vspace*{-2.5cm}
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[scale=0.4]{\@titleimage}
+\end{center}
+\end{figure}
+\Huge{\sc University of Pisa}\\
+\LARGE{\sc \@degree}\\
+\normalsize
+\vspace*{3cm}
+\huge\sc\@title\\
+\end{center}
+\begin{center}
+\Large{\sc Course Hardware and Embedded Security}
+\end{center}
+\vspace*{1cm}
+\large
+\begin{flushright}
+\Large Author(s)\\
+\Large \textbf{\@author}\\
+\end{flushright}
+\begin{center}
+\Large Academic year \@courseyear
+\end{center}
+\setcounter{page}{1}
+}
